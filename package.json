@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "rolandawemo.me",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The personal website for Roland Awemo",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Roland Awemo <rawroro@gmail.com>",
   "dependencies": {
     "gatsby": "^2.24.49",
     "gatsby-image": "^2.4.16",
@@ -23,6 +23,8 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.12",
     "prettier": "2.0.5"
   },
   "keywords": [
@@ -32,7 +34,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint:check": "eslint --ext .ts,.js ./",
+    "lint:fix": "eslint --ext .ts,.js --fix ./",
+    "format:check": "prettier --check ./",
+    "format:fix": "prettier --write ./",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
