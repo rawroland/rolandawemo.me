@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
   settings: {
     react: {
       version: 'detect',
@@ -10,15 +10,17 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ['react'],
+  plugins: ['@typescript-eslint', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
+  parser: '@typescript-eslint/parser',
   rules: {
-    semi: 'error',
+    'react/prop-types': 'off',
+    'react/no-unescaped-entities': 'off',
   },
 };
